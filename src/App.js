@@ -32,34 +32,126 @@ function App() {
 
             <div class="col-span-2 row-span-2 border-accenttheme border-2 h-auto flex items-center justify-center">
               <div className="grid grid-cols-12 grid-rows-6 gap-2 w-96">
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 1
                   </div>
                 </button>
-                <div className="border-accenttheme border-2 col-span-4">2</div>
-                <div className="border-accenttheme border-2 col-span-4">3</div>
-                <div className="border-accenttheme border-2 col-span-4">4</div>
-                <div className="border-accenttheme border-2 col-span-4">5</div>
-                <div className="border-accenttheme border-2 col-span-4">6</div>
-                <div className="border-accenttheme border-2 col-span-4">7</div>
-                <div className="border-accenttheme border-2 col-span-4">8</div>
-                <div className="border-accenttheme border-2 col-span-4">9</div>
-                <div className="border-accenttheme border-2 col-span-4">10</div>
-                <div className="border-accenttheme border-2 col-span-4">11</div>
-                <div className="border-accenttheme border-2 col-span-4">12</div>
-                <div className="border-accenttheme border-2 col-span-4">13</div>
-                <div className="border-accenttheme border-2 col-span-4">14</div>
-                <div className="border-accenttheme border-2 col-span-4">15</div>
-                <div className="border-accenttheme border-2 col-span-4">16</div>
-                <div className="border-accenttheme border-2 col-span-4">17</div>
-                <div className="border-accenttheme border-2 col-span-4">18</div>
-                <div className="border-accenttheme border-2 col-span-4">19</div>
-                <div className="border-accenttheme border-2 col-span-4">20</div>
-                <div className="border-accenttheme border-2 col-span-4">21</div>
-                <div className="border-accenttheme border-2 col-span-4">22</div>
-                <div className="border-accenttheme border-2 col-span-4">23</div>
-                <div className="border-accenttheme border-2 col-span-4">24</div>
+                <button id='buchen' className='border-primarytheme col-span-4 border-2 shadow-lg  bg-secondarytheme text-buttontheme cursor-not-allowed'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 2
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 3
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 4
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 5
+                  </div>
+                </button>
+                <button id='buchen' className='border-primarytheme col-span-4 border-2 shadow-lg  bg-secondarytheme text-buttontheme cursor-not-allowed'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 6
+                  </div>
+                </button>
+                <button id='buchen' className='border-primarytheme col-span-4 border-2 shadow-lg  bg-secondarytheme text-buttontheme cursor-not-allowed'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 7
+                  </div>
+                </button>
+                <button id='buchen' className='border-primarytheme col-span-4 border-2 shadow-lg  bg-secondarytheme text-buttontheme cursor-not-allowed'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 8
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 9
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 10
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 11
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 12
+                  </div>
+                </button>
+                <button id='buchen' className='border-primarytheme col-span-4 border-2 shadow-lg  bg-secondarytheme text-buttontheme cursor-not-allowed'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 13
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 14
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 15
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 16
+                  </div>
+                </button>
+                <button id='buchen' className='border-primarytheme col-span-4 border-2 shadow-lg  bg-secondarytheme text-buttontheme cursor-not-allowed'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 17
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 18
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 19
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 20
+                  </div>
+                </button>
+                <button id='buchen' className='border-primarytheme col-span-4 border-2 shadow-lg  bg-secondarytheme text-buttontheme cursor-not-allowed'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 21
+                  </div>
+                </button>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 22
+                  </div>
+                </button>
+                <button id='buchen' className='border-primarytheme col-span-4 border-2 shadow-lg  bg-secondarytheme text-buttontheme cursor-not-allowed'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 23
+                  </div>
+                </button>
+                <button id='buchen' className='border-primarytheme col-span-4 border-2 shadow-lg  bg-secondarytheme text-buttontheme cursor-not-allowed'>
+                  <div className='border-inherit border-2 m-1'>
+                    Sitzplatz 24
+                  </div>
+                </button>
               </div>
             </div>
 
