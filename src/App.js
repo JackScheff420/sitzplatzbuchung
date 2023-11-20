@@ -1,7 +1,21 @@
+import { useState } from 'react';
 import logo from './Maxcode_Logo.png';
 import profilbild from './testhuman.jpg';
 
 function App() {
+
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleBuchenClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+
   return (
     <div className="App">
       <section id="basis" className="flex flex-col items-center justify-center text-xl text-secondarytheme bg-primarytheme border-2 border-primarytheme shadow-lg shadow-primarytheme px-4 sm:px-8 py-2 sm:py-3 h-screen">
@@ -32,7 +46,7 @@ function App() {
 
             <div class="col-span-2 row-span-2 border-accenttheme border-2 h-auto flex items-center justify-center">
               <div className="grid grid-cols-12 grid-rows-6 gap-2 w-96">
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 1
                   </div>
@@ -42,17 +56,17 @@ function App() {
                     Sitzplatz 2
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 3
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 4
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 5
                   </div>
@@ -72,22 +86,22 @@ function App() {
                     Sitzplatz 8
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 9
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 10
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 11
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 12
                   </div>
@@ -97,17 +111,17 @@ function App() {
                     Sitzplatz 13
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 14
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 15
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 16
                   </div>
@@ -117,17 +131,17 @@ function App() {
                     Sitzplatz 17
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 18
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 19
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 20
                   </div>
@@ -137,7 +151,7 @@ function App() {
                     Sitzplatz 21
                   </div>
                 </button>
-                <button id='buchen' className='border-accenttheme hover:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+                <button id='buchen' className='border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme'>
                   <div className='border-inherit border-2 m-1'>
                     Sitzplatz 22
                   </div>
@@ -167,7 +181,11 @@ function App() {
 
         <section id="Buttons" className="w-full max-w-screen-xl mb-auto h-auto">
           <div className="grid grid-cols-2 gap-4">
-            <button id='buchen' className='border-accenttheme hover:border-primarytheme border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+            <button
+              id='buchen'
+              className='border-accenttheme hover:border-primarytheme border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'
+              onClick={handleBuchenClick}
+            >
               <div className='border-inherit border-2 m-1'>
                 Sitzplatz buchen
               </div>
@@ -179,6 +197,35 @@ function App() {
             </button>
           </div>
         </section>
+
+        {isModalOpen && (
+          <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+              <div className="fixed inset-0 transition-opacity">
+                <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+              </div>
+
+              <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <h3 className="text-lg leading-6 font-medium text-gray-900">Der Sitzplatz wurde erfolgreich gebucht</h3>
+                  </div>
+                </div>
+                <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex items-center justify-center">
+                  <button
+                    id='schließen'
+                    className='border-accenttheme hover:border-primarytheme border-2 w-36 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'
+                    onClick={handleCloseModal}
+                  >
+                    <div className='border-inherit border-2 m-1'>
+                      Schließen
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         <footer id="footer" className="w-full h-auto flex justify-between items-center text-xl text-secondarytheme bg-primarytheme border-2 border-primarytheme shadow-lg shadow-primarytheme px-4 sm:px-8 py-2 sm:py-3">
           <div className="text-sm">
