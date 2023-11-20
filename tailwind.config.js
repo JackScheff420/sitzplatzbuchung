@@ -11,7 +11,8 @@ module.exports = {
       colors: {
         'primarytheme':'#fffad6',
         'secondarytheme':'#374450',
-        'accenttheme' : '#242a22'
+        'accenttheme' : '#242a22',
+        'buttontheme': '#f9f7ec',
       },
 
     },
