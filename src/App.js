@@ -17,7 +17,9 @@ function App() {
   };
 
     const handleButtonBlur = () => {
+    setTimeout(() => {
     setSelectedSeat(null);
+  }, 1000);
   };
 
   const handleCloseModal = () => {
