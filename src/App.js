@@ -16,6 +16,10 @@ function App() {
     setSelectedSeat(seatNumber);
   };
 
+    const handleButtonBlur = () => {
+    setSelectedSeat(null);
+  };
+
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedSeat(null);
@@ -29,7 +33,7 @@ function App() {
       const buttonText = `Sitzplatz ${i}`;
 
       seatButtons.push(
-        <button key={`platz-${i}`} className={buttonClassName} onClick={() => handleAuswahlClick(i)}>
+        <button key={`platz-${i}`} className={buttonClassName} onClick={() => handleAuswahlClick(i)} onBlur={handleButtonBlur}>
           <div className='border-inherit border-2 m-1'>
             {buttonText}
           </div>
@@ -110,14 +114,21 @@ function App() {
           <div className="grid grid-cols-2 gap-4">
             <button
               id='buchen'
-              className='border-accenttheme hover:border-primarytheme border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'
+              className={`border-accenttheme hover:border-primarytheme border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme ${selectedSeat === null ? 'disabled:opacity-50 cursor-not-allowed' : ''
+                }`}
               onClick={handleBuchenClick}
+              disabled={selectedSeat === null}
             >
               <div className='border-inherit border-2 m-1'>
                 Sitzplatz buchen
               </div>
             </button>
-            <button id='stornieren' className='border-accenttheme hover:border-primarytheme border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme'>
+            <button
+              id='stornieren'
+              className={`border-accenttheme hover:border-primarytheme border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme ${selectedSeat === null ? 'disabled:opacity-50 cursor-not-allowed' : ''
+                }`}
+              disabled={selectedSeat === null}
+            >
               <div className='border-inherit border-2 m-1'>
                 Sitzplatz stornieren
               </div>
