@@ -17,9 +17,7 @@ function App() {
   };
 
     const handleButtonBlur = () => {
-    setTimeout(() => {
     setSelectedSeat(null);
-  }, 1000);
   };
 
   const handleCloseModal = () => {
@@ -72,16 +70,16 @@ function App() {
     <div className="App">
       <section id="basis" className="flex flex-col items-center justify-center text-xl text-secondarytheme bg-primarytheme border-2 border-primarytheme shadow-lg shadow-primarytheme px-4 sm:px-8 py-2 sm:py-3 h-screen">
 
-        <section id="header" className="w-full max-w-screen-xl h-auto border-accenttheme border-2 flex justify-between mb-auto">
-          <div className="h-10 w-3/4 text-left p-2">
+        <section id="header" className="w-full max-w-screen-xl h-auto border-accenttheme border-2 flex justify-between mb-4">
+          <div className="h-10 w-auto text-left p-2">
             SITZPLATZBUCHUNG MAXCODE
           </div>
-          <div className="h-10 w-1/4 border-accenttheme border-l-2 text-right p-2">
-            PLATZAUSWAHL
+          <div className="h-10 w-auto border-accenttheme border-l-2 text-right p-2">
+            Angemeldet als Maximilian Scheffler
           </div>
         </section>
 
-        <section id="main" className="w-full max-w-screen-xl mb-auto h-auto">
+        <section id="main" className="w-full max-w-screen-xl mb-4 h-auto">
           <div class="grid grid-cols-3 grid-rows-2 gap-4">
 
             <div class="col-span-1 border-accenttheme border-2">
@@ -175,7 +173,7 @@ function App() {
             <p>&copy; 2023-2023 Maxcode - Alle Rechte vorbehalten.</p>
           </div>
           <div className="text-2xl font-extrabold">
-            <img src={logo} alt="Logo" className='w-52' />
+            <img src={logo} alt="Logo" className='w-52 sm:w-36' />
           </div>
         </footer>
 
