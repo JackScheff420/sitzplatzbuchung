@@ -16,9 +16,15 @@ function App() {
     setSelectedSeat(seatNumber);
   };
 
-    const handleButtonBlur = () => {
-    setSelectedSeat(null);
+  const handleButtonBlur = (event) => {
+    const relatedTarget = event.relatedTarget;
+  
+    if (!relatedTarget || (relatedTarget.tagName && relatedTarget.tagName !== 'BUTTON')) {
+      setSelectedSeat(null);
+    }
   };
+  
+  
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -33,7 +39,11 @@ function App() {
       const buttonText = `Sitzplatz ${i}`;
 
       seatButtons.push(
-        <button key={`platz-${i}`} className={buttonClassName} onClick={() => handleAuswahlClick(i)} onBlur={handleButtonBlur}>
+        <button
+          key={`platz-${i}`}
+          className={buttonClassName}
+          onClick={() => handleAuswahlClick(i)}
+          onBlur={handleButtonBlur}>
           <div className='border-inherit border-2 m-1'>
             {buttonText}
           </div>
