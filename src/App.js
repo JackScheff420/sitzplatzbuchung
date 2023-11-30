@@ -18,13 +18,12 @@ function App() {
 
   const handleButtonBlur = (event) => {
     const relatedTarget = event.relatedTarget;
-  
+
     if (!relatedTarget || (relatedTarget.tagName && relatedTarget.tagName !== 'BUTTON')) {
       setSelectedSeat(null);
     }
   };
-  
-  
+
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -78,18 +77,42 @@ function App() {
 
   return (
     <div className="App">
-      <section id="basis" className="flex flex-col items-center justify-center text-xl text-secondarytheme bg-primarytheme border-2 border-primarytheme shadow-lg shadow-primarytheme px-4 sm:px-8 py-2 sm:py-3 h-screen">
+      <section id="basis" className="flex flex-col items-center justify-center text-xl text-secondarytheme bg-primarytheme border-2 border-primarytheme shadow-lg shadow-primarytheme px-4 sm:px-8 py-2 sm:py-3">
 
-        <section id="header" className="w-full max-w-screen-xl h-auto border-accenttheme border-2 flex justify-between mb-4">
+        <header className="border-accenttheme border-2 top-0 w-full flex justify-between mb-4">
           <div className="h-10 w-auto text-left p-2">
             SITZPLATZBUCHUNG MAXCODE
           </div>
           <div className="h-10 w-auto border-accenttheme border-l-2 text-right p-2">
             Angemeldet als Maximilian Scheffler
           </div>
-        </section>
+        </header>
 
         <section id="main" className="w-full max-w-screen-xl mb-4 h-auto">
+
+          <div className="grid grid-cols-2 grid-rows-2 gap-4">
+            <div className='border-accenttheme border-2'>
+              <div className="flex grid-cols-2 grid-rows-1 gap-4 m-2 font-extrabold items-center justify-center">
+                <div className="col-start-1 row-start-1 bg-purple-300 w-72 h-72 flex items-center justify-center text-4xl">
+                  Sitzplatz: {selectedSeat}
+                </div>
+                <div className="col-start-2 row-start-1 bg-purple-300 w-72 h-72 flex flex-col items-center justify-center">
+                  <img src={profilbild} alt="Profilbild" className="w-3/4 h-auto rounded-full mb-2 grayscale border-accenttheme border-4" />
+                  Nutzer: Testmann
+                </div>
+              </div>
+            </div>
+            <div className="row-span-2 border-accenttheme border-2 flex items-center justify-center">
+              <div className="grid grid-cols-12 grid-rows-6 m-2 gap-2 w-96">
+                {generateSeats()}
+              </div>
+            </div>
+            <div className="row-start-2 border-accenttheme border-2 font-extrabold flex items-center justify-center">
+              {renderSeatInfo()}
+            </div>
+          </div>
+
+{/* 
           <div class="grid grid-cols-3 grid-rows-2 gap-4">
 
             <div class="col-span-1 border-accenttheme border-2">
@@ -114,7 +137,8 @@ function App() {
               {renderSeatInfo()}
             </div>
 
-          </div>
+          </div> */}
+
 
         </section>
 
@@ -175,7 +199,7 @@ function App() {
           </div>
         )}
 
-        <footer id="footer" className="w-full h-auto flex justify-between items-center text-xl text-secondarytheme bg-primarytheme border-2 border-primarytheme shadow-lg shadow-primarytheme px-4 sm:px-8 py-2 sm:py-3">
+        <footer id="footer" className="w-full h-auto flex justify-between items-center text-xl text-secondarytheme bg-primarytheme border-2 border-primarytheme shadow-lg shadow-primarytheme px-4 sm:px-8 py-2">
           <div className="text-sm">
             <p>Firmenadresse: Musterstraße 123, 12345 Musterstadt</p>
             <p>Email: info@example.com</p>
