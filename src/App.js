@@ -7,20 +7,36 @@ function App() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSeat, setSelectedSeat] = useState(null);
+  const [userInfo, setUserInfo] = useState(null);
+  const [seatColor, setSeatColor] = useState('bg-purple-300')
 
   const handleBuchenClick = () => {
     setIsModalOpen(true);
   };
 
-  const handleAuswahlClick = (seatNumber) => {
+  const getRandomColor = () => {
+    const colors = [
+      'red', 'lime', 'yellow', 'orange',
+      'green', 'blue','purple'
+    ];
+
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    return `bg-${randomColor.toLowerCase()}-300`;
+  };
+
+  const handleAuswahlClick = (seatNumber, userInfo) => {
     setSelectedSeat(seatNumber);
+    setUserInfo(userInfo);
+
+    const seatColorClass = getRandomColor();
+    setSeatColor(seatColorClass);
   };
 
   const handleButtonBlur = (event) => {
     const relatedTarget = event.relatedTarget;
 
     if (!relatedTarget || (relatedTarget.tagName && relatedTarget.tagName !== 'BUTTON')) {
-      setSelectedSeat(null);
+      handleAuswahlClick(null, null);
     }
   };
 
@@ -33,15 +49,16 @@ function App() {
   const generateSeats = () => {
     const seatButtons = [];
 
-    for (let i = 1; i <= 24; i++) {
+    for (let seatNumber = 1; seatNumber <= 24; seatNumber++) {
       const buttonClassName = `border-accenttheme hover:border-primarytheme focus:border-primarytheme col-span-4 border-2 shadow-lg bg-buttontheme hover:bg-secondarytheme focus:bg-secondarytheme hover:text-buttontheme focus:text-buttontheme`;
-      const buttonText = `Sitzplatz ${i}`;
+      const buttonText = `Sitzplatz ${seatNumber}`;
+      const userInfo = `Testnutzer ${seatNumber}`;
 
       seatButtons.push(
         <button
-          key={`platz-${i}`}
+          key={`platz-${seatNumber}`}
           className={buttonClassName}
-          onClick={() => handleAuswahlClick(i)}
+          onClick={() => handleAuswahlClick(seatNumber, userInfo)}
           onBlur={handleButtonBlur}>
           <div className='border-inherit border-2 m-1'>
             {buttonText}
@@ -93,12 +110,12 @@ function App() {
           <div className="grid grid-cols-2 grid-rows-2 gap-4">
             <div className='border-accenttheme border-2'>
               <div className="flex grid-cols-2 grid-rows-1 gap-4 m-2 font-extrabold items-center justify-center">
-                <div className="col-start-1 row-start-1 bg-purple-300 w-72 h-72 flex items-center justify-center text-4xl">
+                <div className={`col-start-1 row-start-1 ${seatColor} w-72 h-72 flex items-center justify-center text-4xl`}>
                   Sitzplatz: {selectedSeat}
                 </div>
-                <div className="col-start-2 row-start-1 bg-purple-300 w-72 h-72 flex flex-col items-center justify-center">
+                <div className={`col-start-2 row-start-1 ${seatColor} w-72 h-72 flex flex-col items-center justify-center`}>
                   <img src={profilbild} alt="Profilbild" className="w-3/4 h-auto rounded-full mb-2 grayscale border-accenttheme border-4" />
-                  Nutzer: Testmann
+                  Nutzer: {userInfo}
                 </div>
               </div>
             </div>
@@ -111,34 +128,6 @@ function App() {
               {renderSeatInfo()}
             </div>
           </div>
-
-{/* 
-          <div class="grid grid-cols-3 grid-rows-2 gap-4">
-
-            <div class="col-span-1 border-accenttheme border-2">
-              <div class="grid-cols-2 grid-rows-1 gap-2 m-2 font-extrabold flex items-center justify-center">
-                <div className="bg-purple-300 w-60 h-72 flex items-center justify-center text-4xl">
-                  Sitzplatz: {selectedSeat}
-                </div>
-                <div className="bg-purple-300 w-60 h-72 flex flex-col items-center justify-center">
-                  <img src={profilbild} alt="Profilbild" className="w-3/4 h-auto rounded-full mb-2 grayscale border-accenttheme border-4" />
-                  Nutzer: Testmann
-                </div>
-              </div>
-            </div>
-
-            <div class="col-span-2 row-span-2 border-accenttheme border-2 h-auto flex items-center justify-center">
-              <div className="grid grid-cols-12 grid-rows-6 gap-2 w-96">
-                {generateSeats()}
-              </div>
-            </div>
-
-            <div class="col-span-1 border-accenttheme border-2 font-extrabold flex items-center justify-center">
-              {renderSeatInfo()}
-            </div>
-
-          </div> */}
-
 
         </section>
 
