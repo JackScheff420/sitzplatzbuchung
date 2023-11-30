@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import logo from './Maxcode_Logo.png';
 import profilbild from './testhuman.jpg';
+import freierSessel from './freierSessel.jpg';
 
 function App() {
-
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSeat, setSelectedSeat] = useState(null);
   const [userInfo, setUserInfo] = useState(null);
-  const [seatColor, setSeatColor] = useState('bg-purple-300')
+  const [seatColor, setSeatColor] = useState('bg-purple-300');
 
   const handleBuchenClick = () => {
     setIsModalOpen(true);
@@ -17,7 +16,7 @@ function App() {
   const getRandomColor = () => {
     const colors = [
       'red', 'lime', 'yellow', 'orange',
-      'green', 'blue','purple'
+      'green', 'blue', 'purple'
     ];
 
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -40,7 +39,6 @@ function App() {
     }
   };
 
-
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedSeat(null);
@@ -59,7 +57,8 @@ function App() {
           key={`platz-${seatNumber}`}
           className={buttonClassName}
           onClick={() => handleAuswahlClick(seatNumber, userInfo)}
-          onBlur={handleButtonBlur}>
+          onBlur={handleButtonBlur}
+        >
           <div className='border-inherit border-2 m-1'>
             {buttonText}
           </div>
@@ -91,7 +90,6 @@ function App() {
     }
   };
 
-
   return (
     <div className="App">
       <section id="basis" className="flex flex-col items-center justify-center text-xl text-secondarytheme bg-primarytheme border-2 border-primarytheme shadow-lg shadow-primarytheme px-4 sm:px-8 py-2 sm:py-3">
@@ -107,23 +105,27 @@ function App() {
 
         <section id="main" className="w-full max-w-screen-xl mb-4 h-auto">
 
-          <div className="grid grid-cols-2 grid-rows-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-4">
             <div className='border-accenttheme border-2'>
-              <div className="flex grid-cols-2 grid-rows-1 gap-4 m-2 font-extrabold items-center justify-center">
-                <div className={`col-start-1 row-start-1 ${seatColor} w-72 h-72 flex items-center justify-center text-4xl`}>
+              <div className="flex grid-cols-1 sm:grid-cols-2 grid-rows-1 gap-4 m-2 font-extrabold items-center justify-center">
+                <div className={`sm:col-start-1 sm:row-start-1 ${seatColor} w-full sm:w-72 h-72 flex items-center justify-center text-4xl`}>
                   Sitzplatz: {selectedSeat}
                 </div>
-                <div className={`col-start-2 row-start-1 ${seatColor} w-72 h-72 flex flex-col items-center justify-center`}>
-                  <img src={profilbild} alt="Profilbild" className="w-3/4 h-auto rounded-full mb-2 grayscale border-accenttheme border-4" />
+                <div className={`sm:col-start-2 sm:row-start-1 ${seatColor} w-full sm:w-72 h-72 flex flex-col items-center justify-center`}>
+                  <img src={freierSessel} alt="Profilbild" className="w-3/4 h-auto rounded-full mb-2 border-accenttheme border-4" />
                   Nutzer: {userInfo}
                 </div>
               </div>
             </div>
-            <div className="row-span-2 border-accenttheme border-2 flex items-center justify-center">
+            <div className="row-span-2 border-accenttheme border-2 flex flex-col items-center justify-center">
+              <div className="border-accenttheme border-b-2">
+                Eingang
+              </div>
               <div className="grid grid-cols-12 grid-rows-6 m-2 gap-2 w-96">
                 {generateSeats()}
               </div>
             </div>
+
             <div className="row-start-2 border-accenttheme border-2 font-extrabold flex items-center justify-center">
               {renderSeatInfo()}
             </div>
@@ -131,14 +133,11 @@ function App() {
 
         </section>
 
-
-
         <section id="Buttons" className="w-full max-w-screen-xl mb-auto h-auto">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <button
               id='buchen'
-              className={`border-accenttheme hover:border-primarytheme border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme ${selectedSeat === null ? 'disabled:opacity-50 cursor-not-allowed' : ''
-                }`}
+              className={`border-accenttheme hover:border-primarytheme border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme ${selectedSeat === null ? 'disabled:opacity-50 cursor-not-allowed' : ''}`}
               onClick={handleBuchenClick}
               disabled={selectedSeat === null}
             >
@@ -148,8 +147,7 @@ function App() {
             </button>
             <button
               id='stornieren'
-              className={`border-accenttheme hover:border-primarytheme border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme ${selectedSeat === null ? 'disabled:opacity-50 cursor-not-allowed' : ''
-                }`}
+              className={`border-accenttheme hover:border-primarytheme border-2 shadow-lg shadow-accenttheme bg-buttontheme hover:bg-secondarytheme hover:text-buttontheme ${selectedSeat === null ? 'disabled:opacity-50 cursor-not-allowed' : ''}`}
               disabled={selectedSeat === null}
             >
               <div className='border-inherit border-2 m-1'>
