@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/sitzplatzbuchung/static/css/main.8437d3aa.css",
-    "main.js": "/sitzplatzbuchung/static/js/main.49593519.js",
+    "main.css": "/sitzplatzbuchung/static/css/main.80f9030a.css",
+    "main.js": "/sitzplatzbuchung/static/js/main.b448aedf.js",
+    "static/media/freierSessel.jpg": "/sitzplatzbuchung/static/media/freierSessel.ef88f34bf0e22748d98d.jpg",
     "static/media/testhuman.jpg": "/sitzplatzbuchung/static/media/testhuman.b3d5d10ec6fb483d761b.jpg",
     "static/media/Maxcode_Logo.png": "/sitzplatzbuchung/static/media/Maxcode_Logo.30e234247c9d8abae145.png",
     "index.html": "/sitzplatzbuchung/index.html",
-    "main.8437d3aa.css.map": "/sitzplatzbuchung/static/css/main.8437d3aa.css.map",
-    "main.49593519.js.map": "/sitzplatzbuchung/static/js/main.49593519.js.map"
+    "main.80f9030a.css.map": "/sitzplatzbuchung/static/css/main.80f9030a.css.map",
+    "main.b448aedf.js.map": "/sitzplatzbuchung/static/js/main.b448aedf.js.map"
   },
   "entrypoints": [
-    "static/css/main.8437d3aa.css",
-    "static/js/main.49593519.js"
+    "static/css/main.80f9030a.css",
+    "static/js/main.b448aedf.js"
   ]
 }
